@@ -330,7 +330,7 @@ export class Envs {
       vodServers: this.resolveVodServers(), // vod站点配置，格式：名称@URL,名称@URL
       vodReturnMode: this.get('VOD_RETURN_MODE', 'fastest', 'string').toLowerCase(), // vod返回模式：all（所有站点）或 fastest（最快的站点）
       vodRequestTimeout: this.get('VOD_REQUEST_TIMEOUT', '10000', 'string'), // vod超时时间（默认10秒）
-      bilibliCookie: this.get('BILIBILI_COOKIE', 'SESSDATA=cab910fb%2C1779609844%2Cd3b7d%2Ab2CjBUHYHY2j6XLPXMxvJNfN83ASXW0-_wI-tea2RKIm0hSQo2SG05uip4MKf6I3agZ3YSVklvaE1lakszZE5qWDJzTXNUTU8wZldTWV9KaVNReHNxNHJkRmRmd0FMSEU1REhnRkpvSU94cXVheDJyeGNvanpkQXJhWGI5VThNaTVSTHhPZWNQS2FBIIEC', 'string', true), // b站cookie
+      bilibliCookie: this.get('BILIBILI_COOKIE', '', 'string', true), // b站cookie
       youkuConcurrency: Math.min(this.get('YOUKU_CONCURRENCY', 8, 'number'), 16), // 优酷并发配置
       mergeSourcePairs: this.resolveMergeSourcePairs(), // 源合并配置，用于将源合并获取
       platformOrderArr: this.resolvePlatformOrder(), // 自动匹配优选平台
